@@ -23,41 +23,8 @@ for a, b in pairwise(l):
 The latter is a bit faster than the former.
 
 ### Time comparison:
-``` 
-l = [x for x in range(1000000)]
-import time
-```
+`l = [x for x in range(1000000)]`
 
-```
-beg = time.time()
-for a, b in zip(l[:-1], l[1:]):
-    pass
-print(f'zip time: {time.time() - beg}')
-```
-0.07999
-```
-beg = time.time()
-for a, b in pairwise(l):
-    pass
-print(f'pairwise time: {time.time() - beg}')
-```
- 0.07700
-```
-beg = time.time()
-for val, i in enumerate(l):
-     if i < len(l) - 1:
-        a = val
-        b = l[i+1]
-print(f'index time: {time.time() - beg}')
-```
-0.46799
-```
-beg = time.time()
-limit = len(l) - 1
-for val, i in enumerate(l):
-    if i < limit:
-        a = val
-        b = l[i+1]
-print(f'index time (pre-computed limit): {time.time() - beg}')
-```
-0.33899
+| Algorithm | Naïve   | Naive (pre-computed limit) | zip()   | pairwise() |
+|-----------|---------|----------------------------|---------|------------|
+| Time      | 0.46799 |           0.33899          | 0.07999 |   0.07700  |
