@@ -22,7 +22,7 @@ for a, b in pairwise(l):
 ``` 
 The latter is a bit faster than the former.
 
-Time comparison:
+### Time comparison:
 ```
     l = [x for x in range(1000000)]
     import time
