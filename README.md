@@ -25,6 +25,6 @@ The latter is a bit faster than the former.
 ### Time comparison:
 `l = [x for x in range(1000000)]`
 
-| Algorithm | Naïve   | Naive (pre-computed limit) | zip()   | pairwise() |
+| Algorithm | Naive   | Naive (pre-computed limit) | zip()   | pairwise() |
 |-----------|---------|----------------------------|---------|------------|
 | Time      | 0.46799 |           0.33899          | 0.07999 |   0.07700  |
