@@ -1,4 +1,5 @@
-### Iterate over a list pairwise
+### 1) Iterate over a list pairwise
+---
 Let *l* be a list containing *n* elements. We want to run through it pairwise : **0/1, 1/2, ..., (n-1)/n**
 
 e.g. `l = [0,1,2,3,4,5,6,7,8,9]` -> `1/2, 2/3, 3/4, ..., 8/9`
